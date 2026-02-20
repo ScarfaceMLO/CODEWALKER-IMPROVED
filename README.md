@@ -1,64 +1,64 @@
 # CodeWalker Improved
 
-**CodeWalker Improved** est une version modifiée du projet original CodeWalker développé par Dexyfex.
+**CodeWalker Improved** is a modified version of the original CodeWalker project developed by Dexyfex.
 
-Ce fork a été créé pour répondre à mes besoins personnels et améliorer certains aspects du workflow. L’objectif est d’ajouter des fonctionnalités qui facilitent l’édition et rendent l’utilisation plus confortable.
+This fork was created to meet my personal needs and improve certain aspects of the workflow. The goal is to add features that make editing easier and the overall experience more comfortable.
 
-Le projet est encore au début de son développement. Il évoluera progressivement et certains bugs peuvent être présents.
+The project is still at an early stage of development. It will evolve progressively and some bugs may be present.
 
-Tous les crédits reviennent à Dexyfex pour le travail original.
+All credits go to Dexyfex for the original work.
 
 ---
 
-## Repository officiel
+## Official Repository
 
 https://github.com/dexyfex/CodeWalker/tree/master
 
 ---
 
-# Fonctionnalités ajoutées
+# Added Features
 
 ---
 
 ## Interface
 
-- Passage de l’interface en mode sombre  
-- Légère amélioration du rendu graphique  
-- Ajout d’un effet bloom  
-- Ajustements de couleurs  
+- Switched the interface to dark mode  
+- Slight graphical rendering improvements  
+- Added a bloom effect  
+- Color adjustments  
 
 ---
 
-## Sélection des objets
+## Object Selection
 
-- Nouvelle méthode de sélection  
-- Système inspiré de Codex By Dexyfex  
-- Meilleure précision et retour visuel plus clair  
-
----
-
-## Édition 3D
-
-### EDIT 3D MESH
-Permet de modifier directement les vertex, faces et edges d’un bâtiment depuis CodeWalker.
-
-### EDIT VERTEX COLORS
-Permet de modifier les couleurs de vertex directement dans l’éditeur.
-
-### PROPS PANEL (en développement)
-
-- Accès à tous les props du jeu  
-- Prévisualisation des objets  
-- Drag and drop directement sur la map  
+- New selection method  
+- System inspired by Codex By Dexyfex  
+- Better precision and clearer visual feedback  
 
 ---
 
-# Utilisation
+## Tools
 
-Pour accéder aux nouveaux outils :
+### EDIT 3D MESH :
+Allows direct modification of vertices, faces, and edges of a building directly within CodeWalker.
 
-1. Ouvrir un projet  
-2. Sélectionner un objet  
-3. Cliquer sur **"Tools"**  
+### EDIT VERTEX COLORS :
+Allows editing vertex colors directly in the editor.
 
-Les nouveaux panels seront accessibles depuis ce menu.
+### PROPS PANEL (in development):
+
+- Access to all in-game props  
+- Object preview  
+- Drag and drop directly onto the map  
+
+---
+
+# Usage
+
+To access the new tools:
+
+1. Open a project  
+2. Select an object  
+3. Click on **"Tools"**  
+
+The new panels will be accessible from this menu.
