@@ -34,7 +34,7 @@ https://github.com/dexyfex/CodeWalker/tree/master
 - New selection method  
 - System inspired by Codex By Dexyfex  
 - Better precision and clearer visual feedback  
-
+- You can use either the old or new selection method. Simply change the mode in the Selection tab, Entity = old selection method, Entity precision = new method
 ---
 
 ## Tools
