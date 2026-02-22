@@ -38,6 +38,7 @@ namespace CodeWalker
         Occlusion = 19,
         CalmingQuad = 20,
         WaveQuad = 21,
+        EntityPrecision = 22,
     }
 
 

@@ -253,6 +253,7 @@ namespace CodeWalker
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolbarSelectButton = new CodeWalker.WinForms.ToolStripSplitButtonFix();
             this.ToolbarSelectEntityButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolbarSelectEntityPrecisionButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolbarSelectEntityExtensionButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolbarSelectArchetypeExtensionButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolbarSelectTimeCycleModifierButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -1106,6 +1107,7 @@ namespace CodeWalker
             this.SelectionModeComboBox.FormattingEnabled = true;
             this.SelectionModeComboBox.Items.AddRange(new object[] {
             "Entity",
+            "Entity Precision",
             "Entity Extension",
             "Archetype Extension",
             "Time Cycle Modifier",
@@ -3072,6 +3074,7 @@ namespace CodeWalker
             this.ToolbarSelectButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ToolbarSelectButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolbarSelectEntityButton,
+            this.ToolbarSelectEntityPrecisionButton,
             this.ToolbarSelectEntityExtensionButton,
             this.ToolbarSelectArchetypeExtensionButton,
             this.ToolbarSelectTimeCycleModifierButton,
@@ -3105,6 +3108,13 @@ namespace CodeWalker
             this.ToolbarSelectEntityButton.Size = new System.Drawing.Size(185, 22);
             this.ToolbarSelectEntityButton.Text = "Entity";
             this.ToolbarSelectEntityButton.Click += new System.EventHandler(this.ToolbarSelectEntityButton_Click);
+            // 
+            // ToolbarSelectEntityPrecisionButton
+            // 
+            this.ToolbarSelectEntityPrecisionButton.Name = "ToolbarSelectEntityPrecisionButton";
+            this.ToolbarSelectEntityPrecisionButton.Size = new System.Drawing.Size(185, 22);
+            this.ToolbarSelectEntityPrecisionButton.Text = "Entity Precision";
+            this.ToolbarSelectEntityPrecisionButton.Click += new System.EventHandler(this.ToolbarSelectEntityPrecisionButton_Click);
             // 
             // ToolbarSelectEntityExtensionButton
             // 
@@ -3906,6 +3916,7 @@ namespace CodeWalker
         private System.Windows.Forms.ToolStripMenuItem ToolsMenuOptions;
         private ToolStripSplitButtonFix ToolbarSelectButton;
         private System.Windows.Forms.ToolStripMenuItem ToolbarSelectEntityButton;
+        private System.Windows.Forms.ToolStripMenuItem ToolbarSelectEntityPrecisionButton;
         private System.Windows.Forms.ToolStripMenuItem ToolbarSelectEntityExtensionButton;
         private System.Windows.Forms.ToolStripMenuItem ToolbarSelectArchetypeExtensionButton;
         private System.Windows.Forms.ToolStripMenuItem ToolbarSelectTimeCycleModifierButton;

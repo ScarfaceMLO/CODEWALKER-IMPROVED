@@ -1374,13 +1374,16 @@ namespace CodeWalker
 
                 if (!selected)
                 {
-                    var draw = gameFileCache.TryGetDrawable(CurMouseHit.EntityDef.Archetype);
-                    if (draw != null)
+                    if (SelectionMode == MapSelectionMode.EntityPrecision)
                     {
-                        var matrix = (ori.ToMatrix());
-                        matrix.Row4 = new Vector4(camrel + camera.Position, 1.0f);
-                        Renderer.RenderSelectionOverlay(draw, matrix, new Color4(1.0f, 1.0f, 1.0f, 0.13f)); // Transparent White
-                        return;
+                        var draw = gameFileCache.TryGetDrawable(CurMouseHit.EntityDef.Archetype);
+                        if (draw != null)
+                        {
+                            var matrix = (ori.ToMatrix());
+                            matrix.Row4 = new Vector4(camrel + camera.Position, 1.0f);
+                            Renderer.RenderSelectionOverlay(draw, matrix, new Color4(1.0f, 1.0f, 1.0f, 0.13f)); // Transparent White
+                            return;
+                        }
                     }
                 }
                 else
@@ -1739,7 +1742,7 @@ namespace CodeWalker
 
             if (mode == BoundsShaderMode.Box)
             {
-                if ((ent != null) && (ent.Archetype != null))
+                if ((SelectionMode == MapSelectionMode.EntityPrecision) && (ent != null) && (ent.Archetype != null))
                 {
                     var draw = gameFileCache.TryGetDrawable(ent.Archetype);
                     if (draw != null)
@@ -2486,6 +2489,7 @@ namespace CodeWalker
 
             Renderer.RenderedDrawablesListEnable =
                 ((SelectionMode == MapSelectionMode.Entity) && MouseSelectEnabled) ||
+                ((SelectionMode == MapSelectionMode.EntityPrecision) && MouseSelectEnabled) ||
                 (SelectionMode == MapSelectionMode.EntityExtension) ||
                 (SelectionMode == MapSelectionMode.ArchetypeExtension);
 
@@ -2679,7 +2683,7 @@ namespace CodeWalker
 
 
 
-            bool usegeomboxes = true;// SelectByGeometry;
+            bool usegeomboxes = (SelectionMode == MapSelectionMode.EntityPrecision);// SelectByGeometry;
             var dmodels = drawable.DrawableModels?.High;
             if (dmodels == null)
             { usegeomboxes = false; }
@@ -6053,6 +6057,10 @@ namespace CodeWalker
                     mode = MapSelectionMode.Entity;
                     ToolbarSelectEntityButton.Checked = true;
                     break;
+                case "Entity Precision":
+                    mode = MapSelectionMode.EntityPrecision;
+                    ToolbarSelectEntityPrecisionButton.Checked = true;
+                    break;
                 case "Entity Extension":
                     mode = MapSelectionMode.EntityExtension;
                     ToolbarSelectEntityExtensionButton.Checked = true;
@@ -7935,6 +7943,12 @@ namespace CodeWalker
         private void ToolbarSelectEntityButton_Click(object sender, EventArgs e)
         {
             SetSelectionMode("Entity");
+            SetMouseSelect(true);
+        }
+
+        private void ToolbarSelectEntityPrecisionButton_Click(object sender, EventArgs e)
+        {
+            SetSelectionMode("Entity Precision");
             SetMouseSelect(true);
         }
 
