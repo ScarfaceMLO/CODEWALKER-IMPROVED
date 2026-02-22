@@ -2824,6 +2824,7 @@ namespace CodeWalker
                         if ((nearer&&radsm) || radsm)
                         {
                             outerhit = true;
+                            geometryAABB = bbox;
                         }
                     }
                 }
